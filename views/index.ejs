@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <h1><%= title %></h1>
+    <form method="POST" action="/new">
+    <input type="text" placeholder="user" name="user"/>
+    <input type="text" placeholder="message" name="text"/>
+    <button>Submit</button>
+
+    </form>
+   <% messages.map(message=>{ %>
+     <p><%=message.text %></p>
+     <p><%=message.user %></p>
+     <p><%=message.added %></p>
+  <% }); %>
+
+  </body>
+</html>
